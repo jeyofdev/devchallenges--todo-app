@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Raleway:wght@700&display=swap');
+
+/* ====================
+    VARIABLES
+==================== */
+:root {
+    --gutter: 15px;
+}
+
+/* ====================
+    CONTAINER
+==================== */
+.App {
+    width: 100vw;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 608px;
+    padding-right: var(--gutter);
+    padding-left: var(--gutter);
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+}
