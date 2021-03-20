@@ -1,0 +1,34 @@
+.btn_burger {
+    display: none;
+    margin: 0 auto;
+}
+
+.btn_burger .line {
+    width: 30px;
+    height: 3px;
+    background-color: var(--color-secondary);
+    display: block;
+    margin: 8px auto;
+}
+
+.btn_burger:hover {
+    cursor: pointer;
+}
+
+.btn_burger.is_active .line:nth-child(2) {
+    opacity: 0;
+}
+
+.btn_burger.is_active .line:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+
+.btn_burger.is_active .line:nth-child(3) {
+    transform: translateY(-13px) rotate(-45deg);
+}
+
+@media (max-width: 530px) {
+    .btn_burger {
+        display: block;
+    }
+}

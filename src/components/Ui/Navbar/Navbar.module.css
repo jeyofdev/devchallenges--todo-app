@@ -9,3 +9,19 @@
     justify-content: space-between;
     padding: 0 2.5rem;
 }
+
+@media (max-width: 530px) {
+    .navbar {
+        border-bottom: none;
+    }
+
+    .navbar_nav {
+        display: none;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .navbar_nav.show {
+        display: flex;
+    }
+}

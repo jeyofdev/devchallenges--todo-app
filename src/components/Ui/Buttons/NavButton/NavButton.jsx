@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classes from './NavButton.module.css';
 
-const NavButton = ({ children, isActive }) => {
+const NavButton = ({ children, isActive, handleClick }) => {
     return (
         <li
             className={
@@ -11,7 +11,9 @@ const NavButton = ({ children, isActive }) => {
                     : classes.nav_item
             }
         >
-            <button type="button">{children}</button>
+            <button type="button" onClick={handleClick}>
+                {children}
+            </button>
         </li>
     );
 };
@@ -19,6 +21,7 @@ const NavButton = ({ children, isActive }) => {
 NavButton.propTypes = {
     children: PropTypes.string.isRequired,
     isActive: PropTypes.bool.isRequired,
+    handleClick: PropTypes.func.isRequired,
 };
 
 export default NavButton;
