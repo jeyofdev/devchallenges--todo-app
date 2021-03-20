@@ -5,8 +5,13 @@
 ==================== */
 :root {
     --gutter: 15px;
+
+    --color-gray-100: #bdbdbd;
+    --color-primary: #2f80ed;
     --color-secondary: #333333;
+
     --font-family-primary: 'Raleway', sans-serif;
+    --font-family-secondary: 'Montserrat', sans-serif;
 }
 
 /* ====================

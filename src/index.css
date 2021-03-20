@@ -156,3 +156,17 @@ h6 {
     letter-spacing: -0.045em;
     color: var(--color-secondary);
 }
+
+li,
+button {
+    font-family: var(--font-family-secondary);
+    font-style: normal;
+    font-size: 1rem;
+    line-height: 1.1;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}

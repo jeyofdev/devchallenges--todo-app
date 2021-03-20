@@ -1,4 +1,5 @@
 import React from 'react';
+import Navbar from '../../components/Ui/Navbar/Navbar';
 import H1 from '../../components/Ui/Styles/H1';
 
 const Page = () => {
@@ -12,6 +13,8 @@ const Page = () => {
             >
                 #todo
             </H1>
+
+            <Navbar />
         </>
     );
 };

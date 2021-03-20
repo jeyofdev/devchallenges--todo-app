@@ -1,0 +1,11 @@
+.navbar {
+    margin-bottom: 1.125rem;
+    border-bottom: 1px solid var(--color-gray-100);
+}
+
+.navbar_nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 2.5rem;
+}
