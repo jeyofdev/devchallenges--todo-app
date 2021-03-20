@@ -5,6 +5,8 @@
 ==================== */
 :root {
     --gutter: 15px;
+    --color-secondary: #333333;
+    --font-family-primary: 'Raleway', sans-serif;
 }
 
 /* ====================

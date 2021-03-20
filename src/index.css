@@ -142,3 +142,17 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-family-primary);
+    font-style: normal;
+    font-weight: bold;
+    line-height: 1.25;
+    letter-spacing: -0.045em;
+    color: var(--color-secondary);
+}
