@@ -1,14 +1,17 @@
 import React from 'react';
+import TodoContextProvider from '../../contexts/TodoContext';
 import Page from '../Page/Page';
 import './App.css';
 
 const App = () => {
     return (
-        <div className="App">
-            <div className="container">
-                <Page />
+        <TodoContextProvider>
+            <div className="App">
+                <div className="container">
+                    <Page />
+                </div>
             </div>
-        </div>
+        </TodoContextProvider>
     );
 };
 
