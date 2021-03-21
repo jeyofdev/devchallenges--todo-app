@@ -1,7 +1,7 @@
 import React from 'react';
 import Navbar from '../Navbar/Navbar';
 import H1 from '../../components/Ui/Styles/H1';
-import Form from '../../components/Form/Form';
+import Form from '../Form/Form';
 
 const Page = () => {
     return (
