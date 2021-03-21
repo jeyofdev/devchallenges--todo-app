@@ -13,11 +13,23 @@ const TodoContextProvider = ({ children }) => {
     };
 
     const todoAdd = (name) => {
-        setTodos([...todos, { id: uuid(), name }]);
+        setTodos([...todos, { id: uuid(), name, completed: false }]);
+    };
+
+    const todoCompleted = (todoToUpdate) => {
+        const todosUpdated = todos.map((todo) =>
+            todo.id === todoToUpdate.id
+                ? { ...todo, completed: !todo.completed }
+                : todo
+        );
+
+        setTodos(todosUpdated);
     };
 
     return (
-        <TodoContext.Provider value={{ filter, filterUpdate, todos, todoAdd }}>
+        <TodoContext.Provider
+            value={{ filter, filterUpdate, todos, todoAdd, todoCompleted }}
+        >
             {children}
         </TodoContext.Provider>
     );
