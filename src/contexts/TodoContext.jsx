@@ -6,7 +6,11 @@ export const TodoContext = createContext();
 
 const TodoContextProvider = ({ children }) => {
     const [filter, setFilter] = useState('all');
-    const [todos, setTodos] = useState([]);
+    const [todos, setTodos] = useState(
+        localStorage.getItem('todos') !== null
+            ? JSON.parse(localStorage.getItem('todos'))
+            : []
+    );
     const [todosFiltered, setTodosFiltered] = useState([]);
 
     const filterUpdate = (value) => {
@@ -43,6 +47,8 @@ const TodoContextProvider = ({ children }) => {
         } else {
             setTodosFiltered(todos);
         }
+
+        localStorage.setItem('todos', JSON.stringify(todos));
     }, [filter, todos]);
 
     return (
