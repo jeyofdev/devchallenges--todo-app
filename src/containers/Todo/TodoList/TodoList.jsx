@@ -1,9 +1,12 @@
 import React, { useContext } from 'react';
-import Todo from '../../../components/Todo/Todo';
+import { FaTrash } from 'react-icons/fa';
 import { TodoContext } from '../../../contexts/TodoContext';
+import Todo from '../../../components/Todo/Todo';
+import Button from '../../../components/Ui/Buttons/Button/Button';
+import classes from './TodoList.module.css';
 
 const TodoList = () => {
-    const { todosFiltered, todoCompleted, todoDelete } = useContext(
+    const { filter, todosFiltered, todoCompleted, todoDelete } = useContext(
         TodoContext
     );
 
@@ -31,6 +34,19 @@ const TodoList = () => {
                     <p>no todo available</p>
                 )}
             </div>
+
+            {filter === 'completed' && todosFiltered.length > 1 && (
+                <div className={classes.btn_group}>
+                    <Button
+                        type="danger"
+                        fontSize="0.75rem"
+                        handleClick={() => handleDelete()}
+                    >
+                        <FaTrash className={classes.icon} />
+                        Delete
+                    </Button>
+                </div>
+            )}
         </div>
     );
 };

@@ -20,7 +20,7 @@ const Todo = ({ todo, handleChange, handleDelete }) => {
             </InputCheckbox>
 
             {filter === 'completed' && (
-                <Button submit={false} type="icon" handleClick={handleDelete}>
+                <Button type="icon" handleClick={handleDelete}>
                     <FaTrash className={classes.icon} />
                 </Button>
             )}

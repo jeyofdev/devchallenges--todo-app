@@ -28,7 +28,11 @@ const TodoContextProvider = ({ children }) => {
     };
 
     const todoDelete = (value) => {
-        setTodos(todos.filter((todo) => todo.id !== value.id));
+        if (value !== undefined) {
+            setTodos(todos.filter((todo) => todo.id !== value.id));
+        } else {
+            setTodos(todos.filter((todo) => !todo.completed));
+        }
     };
 
     useEffect(() => {

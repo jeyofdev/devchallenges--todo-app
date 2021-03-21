@@ -1,0 +1,9 @@
+.btn_group {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.icon {
+    font-size: 0.6rem;
+    margin-right: 0.25rem;
+}
