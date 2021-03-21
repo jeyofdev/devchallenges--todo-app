@@ -1,4 +1,4 @@
-import React, { createContext, useState } from 'react';
+import React, { createContext, useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { v4 as uuid } from 'uuid';
 
@@ -7,6 +7,7 @@ export const TodoContext = createContext();
 const TodoContextProvider = ({ children }) => {
     const [filter, setFilter] = useState('all');
     const [todos, setTodos] = useState([]);
+    const [todosFiltered, setTodosFiltered] = useState([]);
 
     const filterUpdate = (value) => {
         setFilter(value);
@@ -26,9 +27,26 @@ const TodoContextProvider = ({ children }) => {
         setTodos(todosUpdated);
     };
 
+    useEffect(() => {
+        if (filter === 'active') {
+            setTodosFiltered(todos.filter((todo) => !todo.completed));
+        } else if (filter === 'completed') {
+            setTodosFiltered(todos.filter((todo) => todo.completed));
+        } else {
+            setTodosFiltered(todos);
+        }
+    }, [filter, todos]);
+
     return (
         <TodoContext.Provider
-            value={{ filter, filterUpdate, todos, todoAdd, todoCompleted }}
+            value={{
+                filter,
+                filterUpdate,
+                todos,
+                todoAdd,
+                todoCompleted,
+                todosFiltered,
+            }}
         >
             {children}
         </TodoContext.Provider>

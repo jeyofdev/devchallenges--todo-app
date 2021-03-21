@@ -3,7 +3,7 @@ import Todo from '../../../components/Todo/Todo';
 import { TodoContext } from '../../../contexts/TodoContext';
 
 const TodoList = () => {
-    const { todos, todoCompleted } = useContext(TodoContext);
+    const { todosFiltered, todoCompleted } = useContext(TodoContext);
 
     const handleChange = (todo) => {
         todoCompleted(todo);
@@ -12,8 +12,8 @@ const TodoList = () => {
     return (
         <div className="todo-list">
             <div className="todo-items">
-                {todos.length > 0 ? (
-                    todos.map((todo) => (
+                {todosFiltered.length > 0 ? (
+                    todosFiltered.map((todo) => (
                         <Todo
                             key={todo.id}
                             todo={todo}
