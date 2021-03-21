@@ -1,5 +1,6 @@
 import React, { createContext, useState } from 'react';
 import PropTypes from 'prop-types';
+import { v4 as uuid } from 'uuid';
 
 export const TodoContext = createContext();
 
@@ -11,8 +12,8 @@ const TodoContextProvider = ({ children }) => {
         setFilter(value);
     };
 
-    const todoAdd = (todo) => {
-        setTodos([...todos, todo]);
+    const todoAdd = (name) => {
+        setTodos([...todos, { id: uuid(), name }]);
     };
 
     return (

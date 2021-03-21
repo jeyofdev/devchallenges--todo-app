@@ -1,0 +1,15 @@
+.todo_list .todo_items {
+    margin-bottom: 2rem;
+}
+
+.form_group {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.375rem;
+}
+
+.icon {
+    color: var(--color-gray-100);
+}
