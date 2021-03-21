@@ -3,10 +3,16 @@ import Todo from '../../../components/Todo/Todo';
 import { TodoContext } from '../../../contexts/TodoContext';
 
 const TodoList = () => {
-    const { todosFiltered, todoCompleted } = useContext(TodoContext);
+    const { todosFiltered, todoCompleted, todoDelete } = useContext(
+        TodoContext
+    );
 
     const handleChange = (todo) => {
         todoCompleted(todo);
+    };
+
+    const handleDelete = (todo) => {
+        todoDelete(todo);
     };
 
     return (
@@ -18,6 +24,7 @@ const TodoList = () => {
                             key={todo.id}
                             todo={todo}
                             handleChange={() => handleChange(todo)}
+                            handleDelete={() => handleDelete(todo)}
                         />
                     ))
                 ) : (

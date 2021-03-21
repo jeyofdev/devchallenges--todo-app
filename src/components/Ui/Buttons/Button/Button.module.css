@@ -12,6 +12,13 @@
     background: var(--color-primary);
 }
 
+.btn.icon {
+    background: transparent;
+    box-shadow: none;
+    width: auto;
+    padding: 0 0.65rem;
+}
+
 .btn.disabled {
     opacity: 0.5;
 }
