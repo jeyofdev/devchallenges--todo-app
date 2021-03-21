@@ -158,7 +158,10 @@ h6 {
 }
 
 li,
-button {
+button,
+input,
+label,
+::placeholder {
     font-family: var(--font-family-secondary);
     font-style: normal;
     font-size: 1rem;

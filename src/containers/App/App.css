@@ -6,7 +6,9 @@
 :root {
     --gutter: 15px;
 
+    --color-light: #fff;
     --color-gray-100: #bdbdbd;
+    --color-gray-200: #828282;
     --color-primary: #2f80ed;
     --color-secondary: #333333;
 

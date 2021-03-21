@@ -1,0 +1,11 @@
+.form_control_text {
+    padding: 1.25rem 0.75rem;
+    width: 100%;
+    border: 1px solid var(--color-gray-100);
+    border-radius: 12px;
+}
+
+::placeholder {
+    color: var(--color-gray-200);
+    font-weight: 400;
+}

@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from '../Navbar/Navbar';
 import H1 from '../../components/Ui/Styles/H1';
+import Form from '../../components/Form/Form';
 
 const Page = () => {
     return (
@@ -15,6 +16,8 @@ const Page = () => {
             </H1>
 
             <Navbar />
+
+            <Form />
         </>
     );
 };

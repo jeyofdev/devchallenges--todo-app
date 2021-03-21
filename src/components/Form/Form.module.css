@@ -1,0 +1,18 @@
+.form {
+    display: grid;
+    grid-template-columns: 78.29% 17.6%;
+    gap: 4.11%; /*25px*/
+    justify-items: stretch;
+    margin-bottom: 2rem;
+}
+
+.form_group {
+    display: block;
+}
+
+@media (max-width: 530px) {
+    .form {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
+}
