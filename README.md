@@ -34,7 +34,7 @@
 
 ## Overview
 
-![Capture d’écran 2021-03-21 à 15 57 15](https://user-images.githubusercontent.com/46073105/111909578-23f8d100-8a5e-11eb-929b-e0e36aa9b289.png)
+![screenshot](https://user-images.githubusercontent.com/46073105/111909578-23f8d100-8a5e-11eb-929b-e0e36aa9b289.png)
 
 ### Built With
 
